@@ -1,0 +1,18 @@
+type Article {
+        id: ID!,
+        name1: String,
+        name2: String,
+        note: String,
+        ecrlongname: String,
+        ecrshortname: String,
+        hasMRC: Boolean
+    }
+
+type Query {
+        articles(count: Int):[Article]
+        article(id: ID):Article
+    }
+
+type Mutation {
+    createVehicle(name1:String, name2:String,  note:String, ecrlongname:String, ecrshortname:String, hasMRC:String):Article
+}

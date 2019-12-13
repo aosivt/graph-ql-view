@@ -1,0 +1,48 @@
+vaadin:
+  compatibilityMode: true
+
+server:
+  port: 8888
+
+spring:
+  servlet:
+    multipart:
+      enabled: false
+  datasource:
+    url: jdbc:postgresql://localhost:5440/postgres?currentSchema=mcs
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+logging:
+  level:
+    org:
+      springframework: DEBUG
+  jpa:
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: none
+  main:
+    allow-bean-definition-overriding: true
+
+# The format used for the keystore. for JKS, set it as JKS
+
+path-to-jars: loaded-files
+
+http:
+  port: 8220
+
+
+#server:
+#  port: 8111
+#
+#spring:
+#  servlet:
+#    multipart:
+#      enabled: false
+#
+#path-to-jars: loaded-files
+#
+
+
