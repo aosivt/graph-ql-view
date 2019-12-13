@@ -1,0 +1,1 @@
+curl -i -H 'Content-Type: application/json'  -d '{ "query": "query { articles(count:5) { id, name1 } } " }' http://localhost:8888/graphql
